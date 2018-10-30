@@ -45,7 +45,7 @@ namespace BullsAndCows
             Check Check = new Check(NumSet);
 
             bool flag = true;
-            int k, position = 0;
+            int k, Try = 1, Position = 0;
 
             string Str = Player.SelectNum();
             Console.WriteLine($"Полученное число: {Str}");
@@ -53,19 +53,21 @@ namespace BullsAndCows
             string StrT = "", StrR = "0000";
             while (flag)
             {
-                for (k = 0; StrR[position] != Str[position]; k++)
+                for (k = 0; StrR[Position] != Str[Position]; k++)
                 {
+                    Try++;
                     StrR = StrT + k.ToString();
                     StrR = Check.CheckString(StrR, NumSet);
                     Console.WriteLine($"Число, которое предположил бот: {StrR}");
                 }
 
                 StrT = StrT + (k-1).ToString();
-                position++;
+                Position++;
 
                 if (StrR == Str) flag = false;
             }
             Console.WriteLine("\n Победа! \n");
+            Console.WriteLine($"Потребовалось {Try} попыток \n");
         }
     }
 }
