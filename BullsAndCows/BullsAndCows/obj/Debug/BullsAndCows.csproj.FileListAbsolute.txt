@@ -5,3 +5,10 @@ C:\Users\mrcre\Desktop\VS17\BullsAndCows\BullsAndCows\obj\Debug\BullsAndCows.csp
 C:\Users\mrcre\Desktop\VS17\BullsAndCows\BullsAndCows\obj\Debug\BullsAndCows.csproj.CoreCompileInputs.cache
 C:\Users\mrcre\Desktop\VS17\BullsAndCows\BullsAndCows\obj\Debug\BullsAndCows.exe
 C:\Users\mrcre\Desktop\VS17\BullsAndCows\BullsAndCows\obj\Debug\BullsAndCows.pdb
+C:\Users\mrcre\Desktop\VS17\CSharp\BullsAndCows\BullsAndCows\bin\Debug\BullsAndCows.exe.config
+C:\Users\mrcre\Desktop\VS17\CSharp\BullsAndCows\BullsAndCows\bin\Debug\BullsAndCows.exe
+C:\Users\mrcre\Desktop\VS17\CSharp\BullsAndCows\BullsAndCows\bin\Debug\BullsAndCows.pdb
+C:\Users\mrcre\Desktop\VS17\CSharp\BullsAndCows\BullsAndCows\obj\Debug\BullsAndCows.csprojAssemblyReference.cache
+C:\Users\mrcre\Desktop\VS17\CSharp\BullsAndCows\BullsAndCows\obj\Debug\BullsAndCows.csproj.CoreCompileInputs.cache
+C:\Users\mrcre\Desktop\VS17\CSharp\BullsAndCows\BullsAndCows\obj\Debug\BullsAndCows.exe
+C:\Users\mrcre\Desktop\VS17\CSharp\BullsAndCows\BullsAndCows\obj\Debug\BullsAndCows.pdb

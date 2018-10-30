@@ -53,20 +53,17 @@ namespace BullsAndCows
             string StrT = "", StrR = "0000";
             while (flag)
             {
-                //Console.WriteLine($"Число, которое предположил бот: {StrR}");
-                if (StrR == Str) flag = false;
-
-                for (k = 1; StrR[position] != Str[position] && k < 5; k++)
+                for (k = 0; StrR[position] != Str[position]; k++)
                 {
-                    Console.WriteLine($"One: {StrR}");
                     StrR = StrT + k.ToString();
-                    Console.WriteLine($"Two: {StrR}");
-                    StrR = Check.CheckString(StrR, position);
-                    Console.WriteLine($"End: {StrR}");
+                    StrR = Check.CheckString(StrR, NumSet);
+                    Console.WriteLine($"Число, которое предположил бот: {StrR}");
                 }
+
+                StrT = StrT + (k-1).ToString();
                 position++;
-                StrT = StrT + k.ToString();
-                flag = false;
+
+                if (StrR == Str) flag = false;
             }
             Console.WriteLine("\n Победа! \n");
         }
