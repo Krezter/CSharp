@@ -10,6 +10,7 @@ namespace BullsAndCows
     {
         private int NumSet { get; set; }
         private string Str { get; set; }
+        private string i;
 
         public RandNum (int numset)
         {
@@ -18,11 +19,11 @@ namespace BullsAndCows
 
         public string Rand()
         {
-            var Rand = new Random();
+            Random Rand = new Random();
             Str = Rand.Next(0, 9).ToString();
             while (Str.Length < NumSet)
             {
-                string i = Rand.Next(0, 9).ToString();
+                i = Rand.Next(0, 9).ToString();
                 if (Str.IndexOf(i) == -1)
                 {
                     Str += i.ToString();

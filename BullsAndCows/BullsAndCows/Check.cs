@@ -9,6 +9,10 @@ namespace BullsAndCows
     class Check
     {
         private int NumSet { get; set; }
+        private int Bull { get; set; }
+        private int Cow { get; set; }
+        private int Num;
+        private bool IsNum;
 
         public Check (int numset)
         {
@@ -17,7 +21,7 @@ namespace BullsAndCows
 
         public string CheckString(string str, int length)
         {
-            int Num = 0;
+            Num = 0;
 
             if (str.Length < length)
             {
@@ -38,14 +42,14 @@ namespace BullsAndCows
         public int CheckNum(string str, int length)
         {
             str = CheckString(str, length);
-            bool IsNum = int.TryParse(str, out int Num);
+            IsNum = int.TryParse(str, out Num);
             if (!IsNum) Num = 0;//Доделать
             return Num;
         }
 
         public int CheckBull(string str1, string str2)
         {
-            int Bull = 0;
+            Bull = 0;
             for (int i = 0; i < NumSet; i++)
             {
                 if (str1[i] == str2[i]) Bull++;
@@ -56,7 +60,7 @@ namespace BullsAndCows
 
         public int CheckCow(string str1, string str2)
         {
-            int Cow = 0;
+            Cow = 0;
             for (int i = 0; i < NumSet; i++)
             {
                 if (str1.IndexOf(str2[i]) != -1) Cow++;

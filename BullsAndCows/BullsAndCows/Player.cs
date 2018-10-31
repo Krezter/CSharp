@@ -9,6 +9,8 @@ namespace BullsAndCows
     class Player
     {
         private int NumSet { get; set; }
+        private string Str { get; set; }
+        private int Num { get; set; }
 
         public Player (int numset)
         {
@@ -23,8 +25,8 @@ namespace BullsAndCows
             Console.WriteLine("1 => Угадывать число самому");
             Console.WriteLine("2 => Задать угадываемое число");
             Console.WriteLine("3 => Выход");
-            string Str = Console.ReadLine();
-            int Num = Check.CheckNum(Str, 1);
+            Str = Console.ReadLine();
+            Num = Check.CheckNum(Str, 1);
             switch (Num)
             {
                 case 1:
@@ -45,8 +47,8 @@ namespace BullsAndCows
         public string SelectNum() //Наговнокодил тута
         {
             Check Check = new Check(NumSet);
-            int Num = 0;
-            string Str = "";
+            Num = 0;
+            Str = "";
             while (Str.Length != NumSet)
             {
                 Console.WriteLine($"Введите {NumSet} числа");

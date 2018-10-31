@@ -9,6 +9,13 @@ namespace BullsAndCows
     class Games
     {
         private int NumSet { get; set; }
+        private string Str { get; set; }
+        private string StrR { get; set; }
+        private int CheckBull { get; set; }
+        private int CheckCow { get; set; }
+        private bool flag = true;
+        private string StrT;
+        private int k, Try, Position;
 
         public Games (int numset)
         {
@@ -20,8 +27,7 @@ namespace BullsAndCows
             RandNum RandNum = new RandNum(NumSet);
             Check Check = new Check(NumSet);
 
-            string StrR, Str = "";
-            int CheckBull, CheckCow;
+            Str = "";
             StrR = RandNum.Rand();
             Console.WriteLine($"Угадываемое число: {StrR}");
 
@@ -44,17 +50,18 @@ namespace BullsAndCows
             Player Player = new Player(NumSet);
             Check Check = new Check(NumSet);
 
-            bool flag = true;
-            int k, Try = 1, Position = 0;
-
-            string Str = Player.SelectNum();
+            Str = Player.SelectNum();
             Console.WriteLine($"Полученное число: {Str}");
 
-            string StrT = "", StrR = "0000";
+            StrT = "";
+            StrR = "0000";
+            Try = 1;
+            Position = 0;
+
             while (flag)
-            {
+            {// По хорошему тут скрипт должен проверять на количество быков, вместо позиций
                 for (k = 0; StrR[Position] != Str[Position]; k++)
-                {
+                { 
                     Try++;
                     StrR = StrT + k.ToString();
                     StrR = Check.CheckString(StrR, NumSet);

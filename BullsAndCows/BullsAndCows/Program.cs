@@ -10,10 +10,13 @@ namespace BullsAndCows
     {
         static void Main(string[] args)
         {
-            Player Player = new Player(4);
+            const byte NumSet = 4;
+
+            Player Player = new Player(NumSet);
+
             bool Flag = true;
             while (Flag){
-                Flag = Player.SelectGame(); //Тупой код, поменять
+                Flag = Player.SelectGame(); // Тупой код, поменять
             }
         }
     }
