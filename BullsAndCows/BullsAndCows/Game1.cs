@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BullsAndCows
 {
-    class Games
+    class Game1
     {
         private int NumSet { get; set; }
         private string Str { get; set; }
@@ -17,12 +17,12 @@ namespace BullsAndCows
         private string StrT;
         private int k, Try, Position;
 
-        public Games (int numset)
+        public Game1 (int numset)
         {
             NumSet = numset;
         }
 
-        public void Game1()
+        public void Start()
         {
             RandNum RandNum = new RandNum(NumSet);
             Check Check = new Check(NumSet);
@@ -43,38 +43,6 @@ namespace BullsAndCows
             }
 
             Console.WriteLine("\n Победа! \n");
-        }
-
-        public void Game2()
-        {
-            Player Player = new Player(NumSet);
-            Check Check = new Check(NumSet);
-
-            Str = Player.SelectNum();
-            Console.WriteLine($"Полученное число: {Str}");
-
-            StrT = "";
-            StrR = "0000";
-            Try = 1;
-            Position = 0;
-
-            while (flag)
-            {// По хорошему тут скрипт должен проверять на количество быков, вместо позиций
-                for (k = 0; StrR[Position] != Str[Position]; k++)
-                { 
-                    Try++;
-                    StrR = StrT + k.ToString();
-                    StrR = Check.CheckString(StrR, NumSet);
-                    Console.WriteLine($"Число, которое предположил бот: {StrR}");
-                }
-
-                StrT = StrT + (k-1).ToString();
-                Position++;
-
-                if (StrR == Str) flag = false;
-            }
-            Console.WriteLine("\n Победа! \n");
-            Console.WriteLine($"Потребовалось {Try} попыток \n");
         }
     }
 }

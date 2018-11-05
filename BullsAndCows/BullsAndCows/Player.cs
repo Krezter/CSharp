@@ -20,7 +20,8 @@ namespace BullsAndCows
         public bool SelectGame()
         {
             Check Check = new Check(NumSet);
-            Games Game = new Games(NumSet);
+            Game1 Game1 = new Game1(NumSet);
+            Game2 Game2 = new Game2(NumSet);
             Console.WriteLine("Режим игры:");
             Console.WriteLine("1 => Угадывать число самому");
             Console.WriteLine("2 => Задать угадываемое число");
@@ -30,10 +31,10 @@ namespace BullsAndCows
             switch (Num)
             {
                 case 1:
-                    Game.Game1();
+                    Game1.Start();
                     break;
                 case 2:
-                    Game.Game2();
+                    Game2.Start();
                     break;
                 case 3:
                     return false;
