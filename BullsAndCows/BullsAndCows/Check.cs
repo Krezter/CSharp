@@ -39,11 +39,16 @@ namespace BullsAndCows
             for(byte i = 0; i < length; i++)
                 if (!Char.IsNumber(str[i]))
                 {
+                    Char[] SChar = str.ToCharArray();
+                    SChar[i] = Char.Parse(Num.ToString());
+                    str = new string(SChar);
+                    /*
                     str = "";
                     while (str.Length < length)
                     {
                         str += Num.ToString();
                     }
+                    */
                 }
             
             return str;
