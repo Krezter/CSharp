@@ -10,7 +10,6 @@ namespace BullsAndCows
     {
         private int NumSet { get; set; }
         private string Str { get; set; }
-        private int Num { get; set; }
 
         public Player (int numset)
         {
@@ -27,16 +26,16 @@ namespace BullsAndCows
             Console.WriteLine("2 => Задать угадываемое число");
             Console.WriteLine("3 => Выход");
             Str = Console.ReadLine();
-            Num = Check.CheckNum(Str, 1);
-            switch (Num)
+            Str = Check.CheckString(Str, 1);
+            switch (Str)
             {
-                case 1:
+                case "1":
                     Game1.Start();
                     break;
-                case 2:
+                case "2":
                     Game2.Start();
                     break;
-                case 3:
+                case "3":
                     return false;
                 default:
                     Console.WriteLine("Такого режима нет");
@@ -45,21 +44,16 @@ namespace BullsAndCows
             return true;
         }
 
-        public string SelectNum() //Наговнокодил тута
+        public string SelectNum()
         {
             Check Check = new Check(NumSet);
-            Num = 0;
             Str = "";
             while (Str.Length != NumSet)
             {
                 Console.WriteLine($"Введите {NumSet} числа");
 
                 Str = Console.ReadLine();
-                Num = Check.CheckNum(Str, NumSet);
-                Str = Num.ToString();
-
-                if (Str.Length != NumSet)
-                    Console.WriteLine("Ошибка!");
+                Str = Check.CheckString(Str, NumSet);
             }
             return Str;
         }

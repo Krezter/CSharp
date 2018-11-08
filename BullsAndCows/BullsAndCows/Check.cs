@@ -12,7 +12,7 @@ namespace BullsAndCows
         private int Bull { get; set; }
         private int Cow { get; set; }
         private int Num;
-        private bool IsNum;
+//        private bool IsNum;
 
         public Check (int numset)
         {
@@ -35,10 +35,20 @@ namespace BullsAndCows
             {
                 str = str.Remove(length, str.Length - length);
             }
+
+            for(byte i = 0; i < length; i++)
+                if (!Char.IsNumber(str[i]))
+                {
+                    str = "";
+                    while (str.Length < length)
+                    {
+                        str += Num.ToString();
+                    }
+                }
             
             return str;
         }
-
+/*
         public int CheckNum(string str, int length)
         {
             str = CheckString(str, length);
@@ -46,7 +56,7 @@ namespace BullsAndCows
             if (!IsNum) Num = 0;//Доделать
             return Num;
         }
-
+*/
         public int CheckBull(string str1, string str2)
         {
             Bull = 0;

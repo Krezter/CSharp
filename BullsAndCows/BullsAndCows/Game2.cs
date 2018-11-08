@@ -11,8 +11,6 @@ namespace BullsAndCows
         private int NumSet { get; set; }
         private string Str { get; set; }
         private string StrR { get; set; }
-        private int CheckBull { get; set; }
-        private int CheckCow { get; set; }
         private bool flag = true;
         private string StrT;
         private int k, Try, Position;

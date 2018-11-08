@@ -13,9 +13,6 @@ namespace BullsAndCows
         private string StrR { get; set; }
         private int CheckBull { get; set; }
         private int CheckCow { get; set; }
-        private bool flag = true;
-        private string StrT;
-        private int k, Try, Position;
 
         public Game1 (int numset)
         {
@@ -34,7 +31,7 @@ namespace BullsAndCows
             while (Str != StrR)
             {
                 Str = Console.ReadLine();
-                Str = Check.CheckString(Str, NumSet).ToString();
+                Str = Check.CheckString(Str, NumSet);
                 Console.WriteLine($"Проверяемое значение: {Str}");
 
                 CheckBull = Check.CheckBull(StrR, Str);
