@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SeaBattle.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,9 @@ namespace SeaBattle
     {
         static void Main()
         {
-
+            Game Game = new Game();
+            Game.Start();
+            Console.ReadKey();
         }
     }
 }

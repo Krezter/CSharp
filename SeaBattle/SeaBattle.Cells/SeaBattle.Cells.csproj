@@ -4,17 +4,16 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A20C7045-83DB-448A-A8C9-92E1AEF6B75E}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>SeaBattle</RootNamespace>
-    <AssemblyName>SeaBattle</AssemblyName>
+    <ProjectGuid>{5EAB7ABF-A4D8-42C1-A3E5-0FD986C50307}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SeaBattle.Cells</RootNamespace>
+    <AssemblyName>SeaBattle.Cells</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +23,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,19 +41,33 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Bot.cs" />
-    <Compile Include="Models\Cell.cs" />
-    <Compile Include="Models\Check.cs" />
-    <Compile Include="Models\Game.cs" />
-    <Compile Include="Models\Map.cs" />
-    <Compile Include="Models\Player.cs" />
-    <Compile Include="Models\Ship.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="CellA1.cs" />
+    <Compile Include="CellA10.cs" />
+    <Compile Include="CellA2.cs" />
+    <Compile Include="CellA3.cs" />
+    <Compile Include="CellA4.cs" />
+    <Compile Include="CellA5.cs" />
+    <Compile Include="CellA6.cs" />
+    <Compile Include="CellA7.cs" />
+    <Compile Include="CellA8.cs" />
+    <Compile Include="CellA9.cs" />
+    <Compile Include="CellB1.cs" />
+    <Compile Include="CellB10.cs" />
+    <Compile Include="CellB2.cs" />
+    <Compile Include="CellB3.cs" />
+    <Compile Include="CellB4.cs" />
+    <Compile Include="CellB5.cs" />
+    <Compile Include="CellB6.cs" />
+    <Compile Include="CellB7.cs" />
+    <Compile Include="CellB8.cs" />
+    <Compile Include="CellB9.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <ProjectReference Include="..\SeaBattle\SeaBattle.csproj">
+      <Project>{a20c7045-83db-448a-a8c9-92e1aef6b75e}</Project>
+      <Name>SeaBattle</Name>
+    </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
