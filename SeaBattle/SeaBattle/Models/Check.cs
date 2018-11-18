@@ -28,7 +28,7 @@ namespace SeaBattle.Models
         }
 
         public bool CheckRegion(Cell[,] Map, int x, int y)
-        {//Очень не оптимизированно, знаю
+        {//Исправить
             if (CheckCell(Map, x+1, y+1) && CheckCell(Map, x-1, y+1)
                 && CheckCell(Map, x-1, y-1) && CheckCell(Map, x+1, y-1)
                 && CheckCell(Map, x, y+1) && CheckCell(Map, x, y-1)
@@ -40,21 +40,22 @@ namespace SeaBattle.Models
             return false;
         }
 
-        public bool CheckShot(Cell[,] Map, int x, int y)
+        public Cell[,] CheckShot(Cell[,] Map, int x, int y)
         {
-            try
+            if (Map[x, y].Status == "#")
             {
-                if (Map[x, y].Status == "#")
-                {
-                    return true;
-                }
+                Map[x, y].Status = "X";
+                Console.WriteLine("Попадание!");
             }
-            catch
+            else
             {
-                return false;
+                Map[x, y].Status = "O";
+                Console.WriteLine("Мимо!");
             }
 
-            return false;
+            Console.ReadKey();
+
+            return Map;
         }
     }
 }

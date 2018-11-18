@@ -13,15 +13,15 @@ namespace SeaBattle.Models
 
         public void Start()
         {
-            var temp = Map.NewMap();
-            var temp2 = Map.NewMap();
+            var PlayerMap = Map.NewMap();
+            var BotMap = Map.NewMap();
 
             //Доработать эту часть
-            temp = Bot.SetShips(temp);
-            temp2 = Bot.SetShips(temp2);
-            Map.ViewMap(temp, temp2);
+            PlayerMap = Bot.SetShips(PlayerMap);
+            BotMap = Bot.SetShips(BotMap);
+            Map.ViewMap(PlayerMap, BotMap);
 
-            Map.UpdMap(temp, temp2);
+            Map.UpdMap(PlayerMap, BotMap);
 
             //Console.ReadKey();
             //Console.Clear();

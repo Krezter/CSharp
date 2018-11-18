@@ -10,7 +10,7 @@ namespace SeaBattle
     class Program
     {
         static void Main()
-        {
+        {//Реализовать меню с настройками
             Game Game = new Game();
             Game.Start();
             Console.ReadKey();

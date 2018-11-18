@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace SeaBattle.Models
 {
-    class Bot
+    class Bot : IActive
     {
         Ship Ship = new Ship();
         Check Check = new Check();
+
+        //static int Hit;
 
         public Cell[,] SetShips(Cell[,] Map)
         {
@@ -36,17 +38,8 @@ namespace SeaBattle.Models
             } while (Map[x, y].Status == "X" || Map[x, y].Status == "O");
 
             Console.WriteLine($"\nБот выстрелил по координатам ({x}, {y})");
-            if (Check.CheckShot(Map, x, y))
-            {
-                Console.WriteLine("Попадание!");
-                Map[x, y].Status = "X";
-            }
-            else
-            {
-                Console.WriteLine("Мимо!");
-                Map[x, y].Status = "O";
-            }
-            Console.ReadKey();
+
+            Map = Check.CheckShot(Map, x, y);
 
             return Map;
         }
