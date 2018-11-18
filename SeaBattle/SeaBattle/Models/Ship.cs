@@ -10,7 +10,7 @@ namespace SeaBattle.Models
     {
         private Check Check = new Check();
 
-        public Cell[,] NewShip(Cell[,] Map, int x, int y, int n)
+        public string[,] NewShip(string[,] Map, int x, int y, int n)
         {//Доработать, меньше условий
 
             bool flag = false;
@@ -22,16 +22,16 @@ namespace SeaBattle.Models
                     {
                         if (x < 6 && Check.CheckRegion(Map, x + 3, y))
                         {
-                            Map[x + 1, y].Status = "#";
-                            Map[x + 2, y].Status = "#";
-                            Map[x + 3, y].Status = "#";
+                            Map[x + 1, y] = "#";
+                            Map[x + 2, y] = "#";
+                            Map[x + 3, y] = "#";
                             flag = true;
                         }
                         else if (Check.CheckRegion(Map, x - 3, y))
                         {
-                            Map[x - 1, y].Status = "#";
-                            Map[x - 2, y].Status = "#";
-                            Map[x - 3, y].Status = "#";
+                            Map[x - 1, y] = "#";
+                            Map[x - 2, y] = "#";
+                            Map[x - 3, y] = "#";
                             flag = true;
                         }
                     }
@@ -39,16 +39,16 @@ namespace SeaBattle.Models
                     {
                         if (y < 6 && Check.CheckRegion(Map, x, y + 3))
                         {
-                            Map[x, y + 1].Status = "#";
-                            Map[x, y + 2].Status = "#";
-                            Map[x, y + 3].Status = "#";
+                            Map[x, y + 1] = "#";
+                            Map[x, y + 2] = "#";
+                            Map[x, y + 3] = "#";
                             flag = true;
                         }
                         else if (Check.CheckRegion(Map, x, y - 3))
                         {
-                            Map[x, y - 1].Status = "#";
-                            Map[x, y - 2].Status = "#";
-                            Map[x, y - 3].Status = "#";
+                            Map[x, y - 1] = "#";
+                            Map[x, y - 2] = "#";
+                            Map[x, y - 3] = "#";
                             flag = true;
                         }
                     }
@@ -58,14 +58,14 @@ namespace SeaBattle.Models
                     {
                         if (Check.CheckRegion(Map, x - 1, y))
                         {
-                            Map[x + 1, y].Status = "#";
-                            Map[x - 1, y].Status = "#";
+                            Map[x + 1, y] = "#";
+                            Map[x - 1, y] = "#";
                             flag = true;
                         }
                         else if (Check.CheckRegion(Map, x+2, y))
                         {
-                            Map[x + 1, y].Status = "#";
-                            Map[x+2, y].Status = "#";
+                            Map[x + 1, y] = "#";
+                            Map[x+2, y] = "#";
                             flag = true;
                         }
                     }
@@ -73,14 +73,14 @@ namespace SeaBattle.Models
                     {
                         if (Check.CheckRegion(Map, x, y - 1))
                         {
-                            Map[x, y + 1].Status = "#";
-                            Map[x, y - 1].Status = "#";
+                            Map[x, y + 1] = "#";
+                            Map[x, y - 1] = "#";
                             flag = true;
                         }
                         else if (Check.CheckRegion(Map, x, y+2))
                         {
-                            Map[x, y + 1].Status = "#";
-                            Map[x, y + 2].Status = "#";
+                            Map[x, y + 1] = "#";
+                            Map[x, y + 2] = "#";
                             flag = true;
                         }
                     }
@@ -90,23 +90,23 @@ namespace SeaBattle.Models
                     {
                         if (Check.CheckRegion(Map, x + 1, y))
                         {
-                            Map[x + 1, y].Status = "#";
+                            Map[x + 1, y] = "#";
                             flag = true;
                         }
                         else if (Check.CheckRegion(Map, x - 1, y))
                         {
-                            Map[x - 1, y].Status = "#";
+                            Map[x - 1, y] = "#";
                             flag = true;
                         }
                     }
                     else if (Check.CheckRegion(Map, x, y + 1))
                     {
-                        Map[x, y + 1].Status = "#";
+                        Map[x, y + 1] = "#";
                         flag = true;
                     }
                     else if (Check.CheckRegion(Map, x, y - 1))
                     {
-                        Map[x, y - 1].Status = "#";
+                        Map[x, y - 1] = "#";
                         flag = true;
                     }
                     break;
@@ -115,12 +115,12 @@ namespace SeaBattle.Models
                     break;
             }
 
-            if(flag) Map[x, y].Status = "#";
+            if(flag) Map[x, y] = "#";
 
             return Map;
         }
 
-        public Cell[,] NewRandShip(Cell[,] Map, int n)
+        public string[,] NewRandShip(string[,] Map, int n)
         {
             int x, y;
             Random Rand = new Random();
@@ -134,7 +134,7 @@ namespace SeaBattle.Models
                 } while (!Check.CheckRegion(Map, x, y));
 
                 NewShip(Map, x, y, n);
-            } while (Map[x, y].Status != "#");
+            } while (Map[x, y] != "#");
 
             return Map;
         }

@@ -13,8 +13,8 @@ namespace SeaBattle.Models
 
         public void Start()
         {
-            var PlayerMap = Map.NewMap();
-            var BotMap = Map.NewMap();
+            string[,] PlayerMap = Map.NewMap();
+            string[,] BotMap = Map.NewMap();
 
             //Доработать эту часть
             PlayerMap = Bot.SetShips(PlayerMap);

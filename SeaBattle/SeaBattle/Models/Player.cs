@@ -11,9 +11,9 @@ namespace SeaBattle.Models
         private Ship Ship { get; set; }
         private Check Check = new Check();
 
-        //static int Hit;
+        public static int Hit;
 
-        public Cell[,] SetShips(Cell[,] Cells)
+        public string[,] SetShips(string[,] Cells)
         {
             for (int num = 4; num > 0; num--)
             {
@@ -31,7 +31,7 @@ namespace SeaBattle.Models
             return Cells;
         }
 
-        public Cell[,] Shot(Cell[,] Map)
+        public string[,] Shot(string[,] Map)
         {//Исправить
             int x = 0, y = 0;
             bool flag = true;
@@ -47,8 +47,8 @@ namespace SeaBattle.Models
                     Console.Write("Y: ");
                     y = Convert.ToInt32(Console.ReadLine());
 
-                    if (x > 0 && y > 0 && x < 11 && y < 11 && Map[x, y].Status != "X"
-                        && Map[x, y].Status != "O") flag = false;
+                    if (x > 0 && y > 0 && x < 11 && y < 11 && Map[x, y] != "X"
+                        && Map[x, y] != "O") flag = false;
                 }
                 catch
                 {
@@ -57,6 +57,7 @@ namespace SeaBattle.Models
             }
 
             Map = Check.CheckShot(Map, x, y);
+            if (Map[x, y] == "X") Hit++;//Заменить
 
             return Map;
         }

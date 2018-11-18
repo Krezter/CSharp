@@ -8,13 +8,13 @@ namespace SeaBattle.Models
 {
     class Check
     {
-        public bool CheckCell(Cell[,] Map, int x, int y)
+        public bool CheckCell(string[,] Map, int x, int y)
         {//Доработать
          //            if (x >= 0 && x < 10 && y >= 0 && y < 10)
 
             try
             {
-                if (Map[x, y].Status == "~")
+                if (Map[x, y]== "~")
                 {
                     return true;
                 }
@@ -27,7 +27,7 @@ namespace SeaBattle.Models
             return false;
         }
 
-        public bool CheckRegion(Cell[,] Map, int x, int y)
+        public bool CheckRegion(string[,] Map, int x, int y)
         {//Исправить
             if (CheckCell(Map, x+1, y+1) && CheckCell(Map, x-1, y+1)
                 && CheckCell(Map, x-1, y-1) && CheckCell(Map, x+1, y-1)
@@ -40,16 +40,16 @@ namespace SeaBattle.Models
             return false;
         }
 
-        public Cell[,] CheckShot(Cell[,] Map, int x, int y)
+        public string[,] CheckShot(string[,] Map, int x, int y)
         {
-            if (Map[x, y].Status == "#")
+            if (Map[x, y] == "#")
             {
-                Map[x, y].Status = "X";
+                Map[x, y] = "X";
                 Console.WriteLine("Попадание!");
             }
             else
             {
-                Map[x, y].Status = "O";
+                Map[x, y] = "O";
                 Console.WriteLine("Мимо!");
             }
 

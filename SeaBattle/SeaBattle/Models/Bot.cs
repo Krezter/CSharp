@@ -11,9 +11,9 @@ namespace SeaBattle.Models
         Ship Ship = new Ship();
         Check Check = new Check();
 
-        //static int Hit;
+        public static int Hit;
 
-        public Cell[,] SetShips(Cell[,] Map)
+        public string[,] SetShips(string[,] Map)
         {
             for (int n = 4; n > 0; n--)
             {
@@ -26,7 +26,7 @@ namespace SeaBattle.Models
             return Map;
         }
 
-        public Cell[,] Shot(Cell[,] Map)
+        public string[,] Shot(string[,] Map)
         {
             int x, y;
             Random Rand = new Random();
@@ -35,11 +35,12 @@ namespace SeaBattle.Models
             {
                 x = Rand.Next(1, 11);
                 y = Rand.Next(1, 11);
-            } while (Map[x, y].Status == "X" || Map[x, y].Status == "O");
+            } while (Map[x, y] == "X" || Map[x, y] == "O");
 
             Console.WriteLine($"\nБот выстрелил по координатам ({x}, {y})");
 
             Map = Check.CheckShot(Map, x, y);
+            if (Map[x, y] == "X") Hit++;//Заменить
 
             return Map;
         }

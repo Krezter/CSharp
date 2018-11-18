@@ -8,8 +8,8 @@ namespace SeaBattle.Models
 {
     interface IActive
     {
-        Cell[,] SetShips(Cell[,] Map);
+        string[,] SetShips(string[,] Map);
 
-        Cell[,] Shot(Cell[,] Map);
+        string[,] Shot(string[,] Map);
     }
 }
