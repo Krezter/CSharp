@@ -37,7 +37,8 @@ namespace SeaBattle.Models
                 y = Rand.Next(1, 11);
             } while (Map[x, y] == "X" || Map[x, y] == "O");
 
-            Console.WriteLine($"\nБот выстрелил по координатам ({x}, {y})");
+            if (Options.ViewBotShot)
+                Console.WriteLine($"\nБот выстрелил по координатам ({x}, {y})");
 
             Map = Check.CheckShot(Map, x, y);
             if (Map[x, y] == "X") Hit++;//Заменить

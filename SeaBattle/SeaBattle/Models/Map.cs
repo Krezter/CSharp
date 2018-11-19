@@ -106,17 +106,16 @@ namespace SeaBattle.Models
                 Player.Shot(Map2);
                 ViewMap(Map1, Map2);
 
-                Bot.Shot(Map1);
-                ViewMap(Map1, Map2);
+                if (Player.Hit != Num)
+                {
+                    Bot.Shot(Map1);
+                    ViewMap(Map1, Map2);
+                }
             }
 
             Console.Clear();
 
-            if (Player.Hit == Num && Bot.Hit == Num)
-            {
-                Console.WriteLine("\n Ничья");
-            }
-            else if (Player.Hit == Num)
+            if (Player.Hit == Num)
             {
                 Console.WriteLine("\n Победа!");
             }

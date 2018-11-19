@@ -53,7 +53,7 @@ namespace SeaBattle.Models
                 Console.WriteLine("Мимо!");
             }
 
-            Console.ReadKey();
+            if(Options.ViewHit) Console.ReadKey();
 
             return Map;
         }
