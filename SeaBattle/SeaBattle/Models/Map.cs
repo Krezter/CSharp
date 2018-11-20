@@ -99,16 +99,18 @@ namespace SeaBattle.Models
         /// <returns></returns>
         public string[,] UpdMap(string[,] Map1, string[,] Map2)
         {
+            OnShot BotShot = Bot.Shot;//Доделать
+            OnShot PlayerShot = Player.Shot;//Тоже
             Player.Hit = Bot.Hit = 0;
 
             while(Player.Hit < Num && Bot.Hit < Num)
             {
-                Player.Shot(Map2);
+                PlayerShot(Map2);
                 ViewMap(Map1, Map2);
 
                 if (Player.Hit != Num)
                 {
-                    Bot.Shot(Map1);
+                    BotShot(Map1);
                     ViewMap(Map1, Map2);
                 }
             }

@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 
 namespace SeaBattle.Models
 {
+    delegate string[,] OnShot(string[,] Map);//Разобраться
+
     class Game
     {
         private Map Map = new Map();
