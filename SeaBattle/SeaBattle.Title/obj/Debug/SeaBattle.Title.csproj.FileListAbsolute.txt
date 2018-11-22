@@ -1,0 +1,10 @@
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Title\bin\Debug\SeaBattle.Title.dll
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Title\bin\Debug\SeaBattle.Title.pdb
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Title\bin\Debug\SeaBattle.exe
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Title\bin\Debug\SeaBattle.pdb
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Title\bin\Debug\SeaBattle.exe.config
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Title\obj\Debug\SeaBattle.Title.csprojAssemblyReference.cache
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Title\obj\Debug\SeaBattle.Title.csproj.CoreCompileInputs.cache
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Title\obj\Debug\SeaBattle.Title.csproj.CopyComplete
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Title\obj\Debug\SeaBattle.Title.dll
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Title\obj\Debug\SeaBattle.Title.pdb

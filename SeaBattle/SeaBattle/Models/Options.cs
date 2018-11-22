@@ -11,7 +11,7 @@ namespace SeaBattle.Models
         public static bool ViewBotShot;
         public static bool ViewHit;
 
-        public void OptionsMenu()
+        public void Menu()
         {
             bool flag = true;
             string Input;

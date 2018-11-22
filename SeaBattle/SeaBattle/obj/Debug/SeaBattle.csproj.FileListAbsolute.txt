@@ -5,3 +5,8 @@ C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\obj\Debug\SeaBattle.cspro
 C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CoreCompileInputs.cache
 C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\obj\Debug\SeaBattle.exe
 C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\obj\Debug\SeaBattle.pdb
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\bin\Debug\Telegram.Bot.dll
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\bin\Debug\Telegram.Bot.xml
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CopyComplete

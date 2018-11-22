@@ -1,4 +1,6 @@
 ﻿using SeaBattle.Models;
+using SeaBattle.Records;
+using SeaBattle.Authors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +15,8 @@ namespace SeaBattle
         {
             Game Game = new Game();
             Options Options = new Options();
+            Title Title = new Title();
+            RecordMenu Records = new RecordMenu();
 
             bool flag = true;
             string Input;
@@ -22,7 +26,7 @@ namespace SeaBattle
                 Console.Clear();
 
                 Console.WriteLine("Морской бой by krezter");
-                Console.WriteLine("\n 1 > Начать игру\n 2 > Настройки\n 3 > Выход");
+                Console.WriteLine("\n 1 > Начать игру\n 2 > Настройки\n 3 > Рекорды\n 4 > Авторы\n 5 > Выход");
 
                 Input = Console.ReadLine();
 
@@ -32,9 +36,15 @@ namespace SeaBattle
                         Game.Start();
                         break;
                     case "2":
-                        Options.OptionsMenu();
+                        Options.Menu();
                         break;
                     case "3":
+                        Records.Menu();
+                        break;
+                    case "4":
+                        Title.Menu();
+                        break;
+                    case "5":
                         flag = false;
                         break;
                     default:

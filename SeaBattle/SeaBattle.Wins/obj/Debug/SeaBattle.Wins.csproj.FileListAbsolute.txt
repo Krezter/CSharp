@@ -1,0 +1,10 @@
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Wins\bin\Debug\SeaBattle.Wins.dll
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Wins\bin\Debug\SeaBattle.Wins.pdb
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Wins\bin\Debug\SeaBattle.exe
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Wins\bin\Debug\SeaBattle.pdb
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Wins\bin\Debug\SeaBattle.exe.config
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Wins\obj\Debug\SeaBattle.Wins.csprojAssemblyReference.cache
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Wins\obj\Debug\SeaBattle.Wins.csproj.CoreCompileInputs.cache
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Wins\obj\Debug\SeaBattle.Wins.csproj.CopyComplete
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Wins\obj\Debug\SeaBattle.Wins.dll
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle.Wins\obj\Debug\SeaBattle.Wins.pdb
