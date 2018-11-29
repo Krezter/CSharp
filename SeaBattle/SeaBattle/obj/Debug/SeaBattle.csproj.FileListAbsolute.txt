@@ -10,3 +10,7 @@ C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\bin\Debug\Telegram.Bot.dl
 C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\bin\Debug\Newtonsoft.Json.xml
 C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\bin\Debug\Telegram.Bot.xml
 C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\obj\Debug\SeaBattle.csproj.CopyComplete
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\bin\Debug\Google.Protobuf.dll
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\bin\Debug\MySql.Data.dll
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\bin\Debug\Google.Protobuf.xml
+C:\Users\mrcre\Desktop\VS17\CSharp\SeaBattle\SeaBattle\bin\Debug\MySql.Data.xml

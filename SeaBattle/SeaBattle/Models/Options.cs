@@ -10,6 +10,7 @@ namespace SeaBattle.Models
     {//В будущем подгружать из файла
         public static bool ViewBotShot;
         public static bool ViewHit;
+        public static bool ShowShip;
 
         public void Menu()
         {
@@ -23,7 +24,8 @@ namespace SeaBattle.Models
                 Console.WriteLine("Настройки");
                 Console.WriteLine($"\n1 > Показывать выстрелы противника {ViewBotShot}");
                 Console.WriteLine($"2 > Уведомлять о попаданиях {ViewHit}");
-                Console.WriteLine("3 > Выход");
+                Console.WriteLine($"3 > Показывать корабли противника {ShowShip}");
+                Console.WriteLine("4 > Выход");
 
                 Input = Console.ReadLine();
 
@@ -38,6 +40,10 @@ namespace SeaBattle.Models
                         else ViewHit = true;
                         break;
                     case "3":
+                        if (ShowShip) ShowShip = false;
+                        else ShowShip = true;
+                        break;
+                    case "4":
                         flag = false;
                         break;
                     default:

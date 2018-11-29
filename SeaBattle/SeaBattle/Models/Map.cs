@@ -86,7 +86,8 @@ namespace SeaBattle.Models
                 Console.Write("{0,2}", x);
                 for (y = 1; y < 11; y++)
                 {
-                    Console.Write($" {Map2[y, x]}");
+                    if (!Options.ShowShip && (Map2[y, x] == "#")) Console.Write(" ~");
+                    else Console.Write($" {Map2[y, x]}");
                 }
                 Console.WriteLine();
             }
@@ -120,6 +121,8 @@ namespace SeaBattle.Models
             if (Player.Hit == Num)
             {
                 Console.WriteLine("\n Победа!");
+                RecordDB Record = new RecordDB();
+                Record.UpdList("99:99");
             }
             else
             {

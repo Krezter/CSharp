@@ -14,9 +14,10 @@ namespace SeaBattle
         static void Main()
         {
             Game Game = new Game();
-            Options Options = new Options();
             Title Title = new Title();
-            RecordMenu Records = new RecordMenu();
+            Options Options = new Options();
+            RecordDB Record = new RecordDB();
+            //RecordMenu Records = new RecordMenu();
 
             bool flag = true;
             string Input;
@@ -39,7 +40,8 @@ namespace SeaBattle
                         Options.Menu();
                         break;
                     case "3":
-                        Records.Menu();
+                        Record.Menu();
+                        //Records.Menu();
                         break;
                     case "4":
                         Title.Menu();
